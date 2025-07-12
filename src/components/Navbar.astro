@@ -1,0 +1,171 @@
+---
+// Navbar.astro - Responsive Navigation Component
+---
+
+<!-- Option 1: Clean Mobile-First Navbar with Hamburger -->
+<nav class="fixed top-0 w-full bg-white shadow-lg z-50 border-b border-gray-200">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- Logo/Brand -->
+        <div class="flex-shrink-0">
+          <a href="#home" class="font-heading font-bold text-xl sm:text-2xl text-gray-900 hover:text-blue-600 transition-colors">
+            SteelCraft Pro
+          </a>
+        </div>
+  
+        <!-- Desktop Navigation -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#home" class="font-body text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-blue-600">
+              Home
+            </a>
+            <a href="#about" class="font-body text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-blue-600">
+              About
+            </a>
+            <a href="#services" class="font-body text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-blue-600">
+              Services
+            </a>
+            <a href="#projects" class="font-body text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-blue-600">
+              Projects
+            </a>
+            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-body font-medium hover:bg-blue-700 transition-colors">
+              Get Quote
+            </a>
+          </div>
+        </div>
+  
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button 
+            type="button" 
+            class="mobile-menu-button bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            aria-controls="mobile-menu" 
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <!-- Hamburger icon -->
+            <svg class="hamburger block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Close icon -->
+            <svg class="close hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu -->
+    <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#home" class="mobile-menu-item font-body text-gray-700 hover:text-blue-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+          Home
+        </a>
+        <a href="#about" class="mobile-menu-item font-body text-gray-700 hover:text-blue-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+          About
+        </a>
+        <a href="#services" class="mobile-menu-item font-body text-gray-700 hover:text-blue-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+          Services
+        </a>
+        <a href="#projects" class="mobile-menu-item font-body text-gray-700 hover:text-blue-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+          Projects
+        </a>
+        <a href="#contact" class="mobile-menu-item bg-blue-600 text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors mx-3 my-2 text-center">
+          Get Quote
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.querySelector('.mobile-menu-button');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const hamburgerIcon = document.querySelector('.hamburger');
+      const closeIcon = document.querySelector('.close');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        const isExpanded = mobileMenu.classList.contains('hidden');
+        
+        // Toggle menu visibility
+        mobileMenu.classList.toggle('hidden');
+        
+        // Toggle icons
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        
+        // Update aria-expanded
+        mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+      });
+      
+      // Close mobile menu when clicking on a link
+      const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
+      mobileMenuItems.forEach(item => {
+        item.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        });
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInsideNav = mobileMenuButton.contains(event.target) || mobileMenu.contains(event.target);
+        
+        if (!isClickInsideNav && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+  
+      // Smooth scrolling for anchor links
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          
+          if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 64; // Account for fixed navbar height
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+  
+      // Add active state based on scroll position
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('text-blue-600', 'border-blue-600');
+          link.classList.add('text-gray-700', 'border-transparent');
+          
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.remove('text-gray-700', 'border-transparent');
+            link.classList.add('text-blue-600', 'border-blue-600');
+          }
+        });
+      });
+    });
+  </script>

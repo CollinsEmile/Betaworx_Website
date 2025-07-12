@@ -1,0 +1,187 @@
+---
+// SocialProof.astro - Social Proof Section
+---
+
+<!-- Option 1: Client Logos + Stats (Recommended) -->
+<section class="py-12 md:py-16 bg-gray-50 border-b border-gray-200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <p class="font-body text-sm text-gray-600 uppercase tracking-wider mb-2">
+        Trusted by Leading Developers
+      </p>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-gray-900">
+        Building Excellence Across the Western Cape
+      </h2>
+    </div>
+
+    <!-- Client Logos Grid -->
+    <div class="mb-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+        
+        <!-- Client Logo 1 -->
+        <div class="group cursor-pointer">
+          <img 
+            src="/clients/client-logo-1.png" 
+            alt="Premium Developer Client"
+            class="h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+          />
+        </div>
+        
+        <!-- Client Logo 2 -->
+        <div class="group cursor-pointer">
+          <img 
+            src="/clients/client-logo-2.png" 
+            alt="Construction Company Client"
+            class="h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+          />
+        </div>
+        
+        <!-- Client Logo 3 -->
+        <div class="group cursor-pointer">
+          <img 
+            src="/clients/client-logo-3.png" 
+            alt="Architect Firm Client"
+            class="h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+          />
+        </div>
+        
+        <!-- Client Logo 4 -->
+        <div class="group cursor-pointer">
+          <img 
+            src="/clients/client-logo-4.png" 
+            alt="Property Developer Client"
+            class="h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+          />
+        </div>
+        
+        <!-- Client Logo 5 -->
+        <div class="group cursor-pointer">
+          <img 
+            src="/clients/client-logo-5.png" 
+            alt="Engineering Firm Client"
+            class="h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+          />
+        </div>
+        
+        <!-- Client Logo 6 -->
+        <div class="group cursor-pointer">
+          <img 
+            src="/clients/client-logo-6.png" 
+            alt="Luxury Home Builder"
+            class="h-12 md:h-16 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
+          />
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      
+      <!-- Stat 1 -->
+      <div class="group">
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="font-heading text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+            25+
+          </div>
+          <div class="font-body text-sm md:text-base text-gray-600">
+            Years Experience
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stat 2 -->
+      <div class="group">
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="font-heading text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+            500+
+          </div>
+          <div class="font-body text-sm md:text-base text-gray-600">
+            Projects Completed
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stat 3 -->
+      <div class="group">
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="font-heading text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+            100%
+          </div>
+          <div class="font-body text-sm md:text-base text-gray-600">
+            Safety Record
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stat 4 -->
+      <div class="group">
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div class="font-heading text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+            R50M+
+          </div>
+          <div class="font-body text-sm md:text-base text-gray-600">
+            Projects Value
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Counter animation for statistics
+  document.addEventListener('DOMContentLoaded', function() {
+    const stats = document.querySelectorAll('.font-heading');
+    
+    const animateCounter = (element, target) => {
+      let current = 0;
+      const increment = target / 50; // 50 steps
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        
+        // Format numbers based on type
+        if (target >= 1000000) {
+          element.textContent = 'R' + Math.floor(current / 1000000) + 'M+';
+        } else if (target >= 100 && target < 500) {
+          element.textContent = Math.floor(current) + '%';
+        } else {
+          element.textContent = Math.floor(current) + '+';
+        }
+      }, 40);
+    };
+
+    // Intersection Observer for stats animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const statElement = entry.target;
+          const statValue = statElement.textContent;
+          
+          // Extract numbers and animate
+          if (statValue.includes('25+')) animateCounter(statElement, 25);
+          if (statValue.includes('500+')) animateCounter(statElement, 500);
+          if (statValue.includes('100%')) animateCounter(statElement, 100);
+          if (statValue.includes('R50M+')) animateCounter(statElement, 50000000);
+          
+          observer.unobserve(statElement);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    // Observe all stat elements
+    stats.forEach(stat => {
+      if (stat.closest('.bg-white')) { // Only animate stats in cards
+        observer.observe(stat);
+      }
+    });
+  });
+</script>

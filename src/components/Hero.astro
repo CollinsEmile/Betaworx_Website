@@ -1,0 +1,100 @@
+---
+// Hero.astro - Steel Company Hero Section
+---
+
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 z-0">
+    <!-- Replace with your steel construction image -->
+    <img 
+      src="/hero-steel-construction.jpg" 
+      alt="Professional steel construction and manufacturing"
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Main Headline -->
+      <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        Precision Steel
+        <span class="block text-blue-400">Solutions</span>
+      </h1>
+      
+      <!-- Subheadline -->
+      <p class="font-body text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Expert manufacturing and installation of premium steel structures for high-end residential and commercial properties
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a 
+          href="#contact" 
+          class="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-lg font-body font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          Get Free Quote
+        </a>
+        <a 
+          href="#projects" 
+          class="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-body font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 shadow-lg"
+        >
+          View Our Work
+        </a>
+      </div>
+      
+      <!-- Trust Indicators -->
+      <div class="mt-12 pt-8 border-t border-gray-400/30">
+        <p class="font-body text-sm text-gray-300 mb-4 uppercase tracking-wider">
+          Trusted by Premium Developers
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-8 opacity-75">
+          <!-- Add client logos here -->
+          <div class="font-body text-white/70 text-sm">25+ Years Experience</div>
+          <div class="font-body text-white/70 text-sm">500+ Projects Completed</div>
+          <div class="font-body text-white/70 text-sm">Licensed & Insured</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+    <a href="#about" class="flex flex-col items-center text-white/70 hover:text-white transition-colors group">
+      <span class="font-body text-sm mb-2 group-hover:animate-pulse">Scroll Down</span>
+      <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Alternative Hero Option 2: Split Layout -->
+<!--
+<section id="home" class="min-h-screen flex items-center pt-16">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <div class="order-2 lg:order-1">
+        <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          Premium Steel
+          <span class="text-blue-600">Manufacturing</span>
+        </h1>
+        
+        <p class="font-body text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+          Delivering exceptional steel fabrication and installation services for luxury residential and commercial developments across the region.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-body font-semibold hover:bg-blue-700 transition-colors text-center">
+            Request Quote
+          </a>
+          <a href="#about" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-body font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors text-center">
+            Learn More
+          </a>
+        </div>

@@ -1,0 +1,280 @@
+---
+// About.astro - Steel Company About Section
+---
+
+<section id="about" class="py-16 md:py-24 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Main About Content -->
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+      
+      <!-- Left Column - Content -->
+      <div class="order-2 lg:order-1">
+        <div class="mb-6">
+          <span class="font-body text-sm text-blue-600 uppercase tracking-wider font-semibold">About Our Company</span>
+          <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-2 mb-6">
+            Crafting Excellence in 
+            <span class="text-blue-600">Steel</span> Since 1998
+          </h2>
+        </div>
+        
+        <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+          <p class="font-body">
+            For over 25 years, we have been the Western Cape's premier steel manufacturing and installation company, specializing in high-end residential and commercial projects that demand precision, quality, and exceptional craftsmanship.
+          </p>
+          
+          <p class="font-body">
+            Our journey began with a simple mission: to deliver steel solutions that exceed expectations. Today, we're proud to be the trusted partner of leading architects, developers, and contractors across the region.
+          </p>
+          
+          <p class="font-body">
+            From our state-of-the-art manufacturing facility to our highly skilled installation teams, every aspect of our operation is designed to deliver the precision and quality that luxury properties demand.
+          </p>
+        </div>
+
+        <!-- Key Values -->
+        <div class="mt-8 grid grid-cols-2 gap-6">
+          <div class="flex items-start space-x-3">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-gray-900">Quality First</h4>
+              <p class="font-body text-sm text-gray-600">Uncompromising standards in every project</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-gray-900">Safety First</h4>
+              <p class="font-body text-sm text-gray-600">Zero compromise on safety protocols</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-gray-900">Innovation</h4>
+              <p class="font-body text-sm text-gray-600">Cutting-edge techniques and technology</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-gray-900">Reliability</h4>
+              <p class="font-body text-sm text-gray-600">On-time delivery, every time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Image -->
+      <div class="order-1 lg:order-2">
+        <div class="relative">
+          <img 
+            src="/about-workshop.jpg" 
+            alt="Steel manufacturing workshop with precision equipment"
+            class="w-full h-96 lg:h-[500px] object-cover rounded-lg shadow-xl"
+          />
+          <!-- Stats Overlay -->
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-lg p-6 shadow-xl border border-gray-100">
+            <div class="flex items-center space-x-4">
+              <div class="text-center">
+                <div class="font-heading text-2xl font-bold text-blue-600">25+</div>
+                <div class="font-body text-xs text-gray-600">Years</div>
+              </div>
+              <div class="w-px h-8 bg-gray-300"></div>
+              <div class="text-center">
+                <div class="font-heading text-2xl font-bold text-blue-600">500+</div>
+                <div class="font-body text-xs text-gray-600">Projects</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="mb-20">
+      <div class="text-center mb-12">
+        <h3 class="font-heading text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          Meet Our Expert Team
+        </h3>
+        <p class="font-body text-lg text-gray-600 max-w-2xl mx-auto">
+          Our certified professionals bring decades of combined experience to every project
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Team Member 1 -->
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+          <img 
+            src="/team-member-1.jpg" 
+            alt="Managing Director"
+            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+          />
+          <h4 class="font-heading text-xl font-bold text-gray-900 mb-1">John Smith</h4>
+          <p class="font-body text-blue-600 font-medium mb-3">Managing Director</p>
+          <p class="font-body text-sm text-gray-600 leading-relaxed">
+            25+ years in steel fabrication with expertise in high-end residential and commercial projects.
+          </p>
+          
+          <!-- Certifications -->
+          <div class="mt-4 flex justify-center space-x-2">
+            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-body">Licensed Contractor</span>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+          <img 
+            src="/team-member-2.jpg" 
+            alt="Lead Engineer"
+            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+          />
+          <h4 class="font-heading text-xl font-bold text-gray-900 mb-1">Sarah Johnson</h4>
+          <p class="font-body text-blue-600 font-medium mb-3">Lead Engineer</p>
+          <p class="font-body text-sm text-gray-600 leading-relaxed">
+            Structural engineer specializing in steel design and calculations for complex architectural projects.
+          </p>
+          
+          <div class="mt-4 flex justify-center space-x-2">
+            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-body">PE Licensed</span>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+          <img 
+            src="/team-member-3.jpg" 
+            alt="Installation Manager"
+            class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+          />
+          <h4 class="font-heading text-xl font-bold text-gray-900 mb-1">Mike Williams</h4>
+          <p class="font-body text-blue-600 font-medium mb-3">Installation Manager</p>
+          <p class="font-body text-sm text-gray-600 leading-relaxed">
+            Certified installation specialist ensuring safety compliance and quality on every job site.
+          </p>
+          
+          <div class="mt-4 flex justify-center space-x-2">
+            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-body">Safety Certified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications & Accreditations -->
+    <div class="bg-white rounded-2xl p-8 md:p-12">
+      <div class="text-center mb-12">
+        <h3 class="font-heading text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          Certifications & Accreditations
+        </h3>
+        <p class="font-body text-lg text-gray-600">
+          Fully licensed, insured, and certified to the highest industry standards
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        
+        <!-- Certification 1 -->
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
+            <svg class="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+            </svg>
+          </div>
+          <h4 class="font-heading font-semibold text-gray-900 mb-1">Licensed Contractor</h4>
+          <p class="font-body text-sm text-gray-600">Fully licensed for all steel construction work</p>
+        </div>
+
+        <!-- Certification 2 -->
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
+            <svg class="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h4 class="font-heading font-semibold text-gray-900 mb-1">Fully Insured</h4>
+          <p class="font-body text-sm text-gray-600">Comprehensive liability and workers coverage</p>
+        </div>
+
+        <!-- Certification 3 -->
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
+            <svg class="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z"/>
+            </svg>
+          </div>
+          <h4 class="font-heading font-semibold text-gray-900 mb-1">Safety Certified</h4>
+          <p class="font-body text-sm text-gray-600">Advanced safety training and protocols</p>
+        </div>
+
+        <!-- Certification 4 -->
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors duration-300">
+            <svg class="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </div>
+          <h4 class="font-heading font-semibold text-gray-900 mb-1">Award Winning</h4>
+          <p class="font-body text-sm text-gray-600">Recognized for excellence in steel fabrication</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Intersection Observer for animations
+  document.addEventListener('DOMContentLoaded', function() {
+    const animatedElements = document.querySelectorAll('#about .grid > div, #about .bg-white');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 150);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Set initial state and observe
+    animatedElements.forEach(element => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(30px)';
+      element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+      observer.observe(element);
+    });
+  });
+</script>
+
+<style>
+  /* Ensure proper scroll margin for anchor links */
+  #about {
+    scroll-margin-top: 5rem;
+  }
+</style>
