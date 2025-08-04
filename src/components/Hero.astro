@@ -1,100 +1,214 @@
 ---
-// Hero.astro - Steel Company Hero Section
+// Hero.astro - Classy Steel Company Hero Section
+import HeroImage from '/public/images/HeroImage.jpg'
 ---
 
-<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-light-silver pt-20 snap-start snap-always">
   <!-- Background Image with Overlay -->
   <div class="absolute inset-0 z-0">
     <!-- Replace with your steel construction image -->
     <img 
-      src="/hero-steel-construction.jpg" 
+      src={HeroImage.src}
       alt="Professional steel construction and manufacturing"
-      class="w-full h-full object-cover"
+      class="w-full h-full object-cover object-top"
       loading="eager"
     />
-    <!-- Dark overlay for text readability -->
-    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-linear-to-br from-slate-900/80 to-slate-900/20"></div>
   </div>
 
   <!-- Hero Content -->
   <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-5xl mx-auto">
       
       <!-- Main Headline -->
-      <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        Precision Steel
-        <span class="block text-blue-400">Solutions</span>
+      <h1 class="font-heading text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-light-silver mb-6 leading-tight tracking-tight">
+        BETA STEELWORX
+        <span class="block text-silver text-l sm:text-xl md:text-3xl lg:text-4xl font-normal mt-3 tracking-widest uppercase">
+          Forging Excellence
+        </span>
       </h1>
       
       <!-- Subheadline -->
-      <p class="font-body text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-        Expert manufacturing and installation of premium steel structures for high-end residential and commercial properties
+      <p class="font-body text-base sm:text-lg md:text-xl lg:text-2xl text-light-silver mb-8 max-w-3xl mx-auto leading-relaxed tracking-wide">
+        Premium steel fabrication and installation specialists serving Cape Town, Stellenbosch, and the Western Cape region
       </p>
+      <!-- Service Keywords Line -->
+      <div class="mb-8">
+        <p class="font-body text-sm md:text-base text-light-silver uppercase tracking-[0.2em] font-semibold">
+          Custom Fabrication • Structural Steel • Architectural Metalwork • Professional Installation
+        </p>
+      </div>
       
       <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-5 sm:mb-12">
         <a 
-          href="#contact" 
-          class="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-lg font-body font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          href="#contact"
+          class="w-[70%] sm:w-auto bg-light-silver text-gunmetal px-4 py-2 sm:px-8 sm:py-4 font-body font-bold text-base hover:scale-[102%] hover:text-dark-gunmetal transition-all duration-100 shadow-2xl uppercase tracking-widest border-2 border-light-silver hover:border-white"
         >
           Get Free Quote
         </a>
         <a 
-          href="#projects" 
-          class="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-lg font-body font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 shadow-lg"
+          href="#projects"
+          class="w-[70%] sm:w-auto border-2 border-silver text-silver px-4 py-2 sm:px-8 sm:py-4 font-body font-bold text-base hover:bg-light-silver hover:scale-[102%] hover:text-gunmetal transition-all duration-100 shadow-xl uppercase tracking-widest"
         >
           View Our Work
         </a>
       </div>
       
       <!-- Trust Indicators -->
-      <div class="mt-12 pt-8 border-t border-gray-400/30">
-        <p class="font-body text-sm text-gray-300 mb-4 uppercase tracking-wider">
-          Trusted by Premium Developers
+      <div class="mt-5 sm:mt-12 pt-8 border-t-2 border-silver/30">
+        <p class="font-body text-xs text-silver mb-6 uppercase tracking-[0.3em] font-bold">
+          Western Cape's Trusted Steel Fabrication Experts
         </p>
-        <div class="flex flex-wrap justify-center items-center gap-8 opacity-75">
-          <!-- Add client logos here -->
-          <div class="font-body text-white/70 text-sm">25+ Years Experience</div>
-          <div class="font-body text-white/70 text-sm">500+ Projects Completed</div>
-          <div class="font-body text-white/70 text-sm">Licensed & Insured</div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto justify-items-center">
+          <!-- Trust Indicator Blocks -->
+          <div class="trust-indicator bg-gunmetal/40 border border-silver/30 p-2 sm:p-4 backdrop-blur-sm inline-block w-56">
+            <div class="font-heading text-lg sm:text-2xl font-bold text-light-silver mb-1">25+</div>
+            <div class="font-body text-silver text-xs uppercase tracking-widest">Years Experience</div>
+          </div>
+          <div class="trust-indicator bg-gunmetal/40 border border-silver/30 p-2 sm:p-4 backdrop-blur-sm inline-block w-56">
+            <div class="font-heading text-lg sm:text-2xl font-bold text-light-silver mb-1">100+</div>
+            <div class="font-body text-silver text-xs uppercase tracking-widest">Projects Completed</div>
+          </div>
+          <div class="trust-indicator bg-gunmetal/40 border border-silver/30 p-2 sm:p-4 backdrop-blur-sm inline-block w-56">
+            <div class="font-heading text-lg sm:text-2xl font-bold text-light-silver mb-1">100%</div>
+            <div class="font-body text-silver text-xs uppercase tracking-widest">Licensed & Insured</div>
+          </div>
         </div>
       </div>
-      
     </div>
-  </div>
-
-  <!-- Scroll Down Indicator -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-    <a href="#about" class="flex flex-col items-center text-white/70 hover:text-white transition-colors group">
-      <span class="font-body text-sm mb-2 group-hover:animate-pulse">Scroll Down</span>
-      <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-      </svg>
-    </a>
   </div>
 </section>
 
-<!-- Alternative Hero Option 2: Split Layout -->
-<!--
-<section id="home" class="min-h-screen flex items-center pt-16">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      
-      <div class="order-2 lg:order-1">
-        <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          Premium Steel
-          <span class="text-blue-600">Manufacturing</span>
-        </h1>
-        
-        <p class="font-body text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-          Delivering exceptional steel fabrication and installation services for luxury residential and commercial developments across the region.
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#contact" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-body font-semibold hover:bg-blue-700 transition-colors text-center">
-            Request Quote
-          </a>
-          <a href="#about" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-body font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors text-center">
-            Learn More
-          </a>
-        </div>
+<style>
+  /* Custom gunmetal and silver colors */
+  :root {
+    --gunmetal: #2C3539;
+    --dark-gunmetal: #1F2528;
+    --silver: #C0C0C0;
+    --light-silver: #eeeded;
+  }
+  
+  .bg-gunmetal {
+    background-color: var(--gunmetal);
+  }
+  
+  .bg-dark-gunmetal {
+    background-color: var(--dark-gunmetal);
+  }
+  
+  .bg-silver {
+    background-color: var(--silver);
+  }
+  
+  .bg-light-silver {
+    background-color: var(--light-silver);
+  }
+  
+  .text-gunmetal {
+    color: var(--gunmetal);
+  }
+  
+  .text-dark-gunmetal {
+    color: var(--dark-gunmetal);
+  }
+  
+  .text-silver {
+    color: var(--silver);
+  }
+  
+  .text-light-silver {
+    color: var(--light-silver);
+  }
+  
+  .border-gunmetal {
+    border-color: var(--gunmetal);
+  }
+  
+  .border-silver {
+    border-color: var(--silver);
+  }
+  
+  .border-light-silver {
+    border-color: var(--light-silver);
+  }
+  
+  .hover\:bg-silver:hover {
+    background-color: var(--silver);
+  }
+  
+  .hover\:bg-light-silver:hover {
+    background-color: var(--light-silver);
+  }
+  
+  .hover\:bg-dark-gunmetal:hover {
+    background-color: var(--dark-gunmetal);
+  }
+  
+  .hover\:text-gunmetal:hover {
+    color: var(--gunmetal);
+  }
+  
+  .hover\:text-dark-gunmetal:hover {
+    color: var(--dark-gunmetal);
+  }
+  
+  .hover\:text-silver:hover {
+    color: var(--silver);
+  }
+  
+  .hover\:text-light-silver:hover {
+    color: var(--light-silver);
+  }
+  
+  .hover\:border-silver:hover {
+    border-color: var(--silver);
+  }
+  
+  .hover\:border-light-silver:hover {
+    border-color: var(--light-silver);
+  }
+  
+  .hover\:border-white:hover {
+    border-color: white;
+  }
+  
+  /* Custom utility classes for enhanced effects */
+  .tracking-[0.3em] {
+    letter-spacing: 0.3em;
+  }
+  
+  /* Trust indicator hover effects */
+  .trust-indicator {
+    transition: all 0.3s ease;
+  }
+  
+  .trust-indicator:hover {
+    background-color: rgba(192, 192, 192, 0.1);
+    border-color: rgba(192, 192, 192, 0.6);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive text sizing improvements */
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+    
+    h1 span {
+      font-size: 1.25rem;
+      margin-top: 0.75rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 4rem;
+    }
+    
+    h1 span {
+      font-size: 2.5rem;
+    }
+  }
+</style>

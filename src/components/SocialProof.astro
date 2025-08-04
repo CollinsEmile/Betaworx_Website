@@ -1,24 +1,22 @@
 ---
 // SocialProof.astro - Social Proof Section
 ---
-
-<!-- Option 1: Client Logos + Stats (Recommended) -->
-<section class="py-12 md:py-16 bg-gray-50 border-b border-gray-200">
+<section class="py-12 md:py-16 bg-gray-50 border-b border-gray-200 snap-start snap-always scroll-mt-20" id="SocialProof">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     
-    <!-- Section Header -->
+    <!-- Enhanced Section Header -->
     <div class="text-center mb-12">
       <p class="font-body text-sm text-gray-600 uppercase tracking-wider mb-2">
-        Trusted by Leading Developers
+        Trusted Across the Western Cape
       </p>
       <h2 class="font-heading text-2xl md:text-3xl font-bold text-gray-900">
-        Building Excellence Across the Western Cape
+        Building Excellence throughout the Cape Peninsula
       </h2>
     </div>
 
     <!-- Client Logos Grid -->
     <div class="mb-16">
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
         
         <!-- Client Logo 1 -->
         <div class="group cursor-pointer">
@@ -83,7 +81,7 @@
       <!-- Stat 1 -->
       <div class="group">
         <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="font-heading text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+          <div class="font-heading text-3xl md:text-4xl font-bold text-gunmetal mb-2 group-hover:scale-110 transition-transform duration-300">
             25+
           </div>
           <div class="font-body text-sm md:text-base text-gray-600">
@@ -95,8 +93,8 @@
       <!-- Stat 2 -->
       <div class="group">
         <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="font-heading text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
-            500+
+          <div class="font-heading text-3xl md:text-4xl font-bold text-gunmetal mb-2 group-hover:scale-110 transition-transform duration-300">
+            100+
           </div>
           <div class="font-body text-sm md:text-base text-gray-600">
             Projects Completed
@@ -107,7 +105,7 @@
       <!-- Stat 3 -->
       <div class="group">
         <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="font-heading text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+          <div class="font-heading text-3xl md:text-4xl font-bold text-gunmetal mb-2 group-hover:scale-110 transition-transform duration-300">
             100%
           </div>
           <div class="font-body text-sm md:text-base text-gray-600">
@@ -119,7 +117,7 @@
       <!-- Stat 4 -->
       <div class="group">
         <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="font-heading text-3xl md:text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
+          <div class="font-heading text-3xl md:text-4xl font-bold text-gunmetal mb-2 group-hover:scale-110 transition-transform duration-300">
             R50M+
           </div>
           <div class="font-body text-sm md:text-base text-gray-600">
@@ -132,7 +130,6 @@
 
   </div>
 </section>
-
 <script>
   // Counter animation for statistics
   document.addEventListener('DOMContentLoaded', function() {
@@ -185,3 +182,29 @@
     });
   });
 </script>
+
+<style>
+  /* Custom gunmetal and silver colors */
+  :root {
+    --gunmetal: #2C3539;
+    --dark-gunmetal: #1F2528;
+    --silver: #C0C0C0;
+    --light-silver: #eeeded;
+  }
+  
+  .text-gunmetal {
+    color: var(--gunmetal);
+  }
+  
+  .text-dark-gunmetal {
+    color: var(--dark-gunmetal);
+  }
+  
+  .text-silver {
+    color: var(--silver);
+  }
+  
+  .text-light-silver {
+    color: var(--light-silver);
+  }
+</style>

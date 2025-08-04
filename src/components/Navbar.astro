@@ -1,35 +1,35 @@
 ---
-// Navbar.astro - Responsive Navigation Component
+// Navbar.astro - Classy Square Navigation Component
 ---
 
-<!-- Option 1: Clean Mobile-First Navbar with Hamburger -->
-<nav class="fixed top-0 w-full bg-white shadow-lg z-50 border-b border-gray-200">
+<!-- Classy Square Navbar with Light Silver Background/Gunmetal Text Theme -->
+<nav class="fixed top-0 w-full bg-white shadow-2xl z-50 border-b-2 border-gunmetal">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
+      <div class="flex justify-between items-center h-20">
         
         <!-- Logo/Brand -->
         <div class="flex-shrink-0">
-          <a href="#home" class="font-heading font-bold text-xl sm:text-2xl text-gray-900 hover:text-blue-600 transition-colors">
-            SteelCraft Pro
+          <a href="#home" class="font-heading font-bold text-2xl sm:text-3xl text-gunmetal hover:text-dark-gunmetal transition-colors duration-300 tracking-wide">
+            Beta Steelworx
           </a>
         </div>
   
         <!-- Desktop Navigation -->
         <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-8">
-            <a href="#home" class="font-body text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-blue-600">
+          <div class="ml-10 flex items-center space-x-1">
+            <a href="#home" class="nav-link font-body text-gunmetal hover:text-dark-gunmetal hover:bg-silver px-6 py-3 text-sm font-medium transition-all duration-300 border-r border-gunmetal first:border-l uppercase tracking-widest">
               Home
             </a>
-            <a href="#about" class="font-body text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-blue-600">
+            <a href="#about" class="nav-link font-body text-gunmetal hover:text-dark-gunmetal hover:bg-silver px-6 py-3 text-sm font-medium transition-all duration-300 border-r border-gunmetal uppercase tracking-widest">
               About
             </a>
-            <a href="#services" class="font-body text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-blue-600">
+            <a href="#services" class="nav-link font-body text-gunmetal hover:text-dark-gunmetal hover:bg-silver px-6 py-3 text-sm font-medium transition-all duration-300 border-r border-gunmetal uppercase tracking-widest">
               Services
             </a>
-            <a href="#projects" class="font-body text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-blue-600">
+            <a href="#projects" class="nav-link font-body text-gunmetal hover:text-dark-gunmetal hover:bg-silver px-6 py-3 text-sm font-medium transition-all duration-300 border-r border-gunmetal uppercase tracking-widest">
               Projects
             </a>
-            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-body font-medium hover:bg-blue-700 transition-colors">
+            <a href="#contact" class="bg-gunmetal text-light-silver px-8 py-3 font-body font-bold hover:bg-dark-gunmetal hover:text-white transition-all duration-300 ml-4 uppercase tracking-widest shadow-lg">
               Get Quote
             </a>
           </div>
@@ -39,18 +39,18 @@
         <div class="md:hidden">
           <button 
             type="button" 
-            class="mobile-menu-button bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            class="mobile-menu-button bg-gray-900 inline-flex items-center justify-center p-3 text-gray-300 hover:text-gold hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold border border-gray-700"
             aria-controls="mobile-menu" 
             aria-expanded="false"
           >
             <span class="sr-only">Open main menu</span>
             <!-- Hamburger icon -->
-            <svg class="hamburger block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <svg class="hamburger block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" stroke-width="2">
+              <path stroke-linecap="square" stroke-linejoin="miter" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             <!-- Close icon -->
-            <svg class="close hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            <svg class="close hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" stroke-width="2">
+              <path stroke-linecap="square" stroke-linejoin="miter" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
@@ -58,21 +58,21 @@
     </div>
   
     <!-- Mobile menu -->
-    <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#home" class="mobile-menu-item font-body text-gray-700 hover:text-blue-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+    <div class="mobile-menu hidden md:hidden bg-light-silver border-t-2 border-gunmetal">
+      <div class="px-4 pt-4 pb-6 space-y-1">
+        <a href="#home" class="mobile-menu-item font-body text-gunmetal hover:text-dark-gunmetal hover:bg-silver block px-4 py-4 text-base font-medium transition-all duration-300 border-b border-gunmetal uppercase tracking-widest">
           Home
         </a>
-        <a href="#about" class="mobile-menu-item font-body text-gray-700 hover:text-blue-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+        <a href="#about" class="mobile-menu-item font-body text-gunmetal hover:text-dark-gunmetal hover:bg-silver block px-4 py-4 text-base font-medium transition-all duration-300 border-b border-gunmetal uppercase tracking-widest">
           About
         </a>
-        <a href="#services" class="mobile-menu-item font-body text-gray-700 hover:text-blue-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+        <a href="#services" class="mobile-menu-item font-body text-gunmetal hover:text-dark-gunmetal hover:bg-silver block px-4 py-4 text-base font-medium transition-all duration-300 border-b border-gunmetal uppercase tracking-widest">
           Services
         </a>
-        <a href="#projects" class="mobile-menu-item font-body text-gray-700 hover:text-blue-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+        <a href="#projects" class="mobile-menu-item font-body text-gunmetal hover:text-dark-gunmetal hover:bg-silver block px-4 py-4 text-base font-medium transition-all duration-300 border-b border-gunmetal uppercase tracking-widest">
           Projects
         </a>
-        <a href="#contact" class="mobile-menu-item bg-blue-600 text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors mx-3 my-2 text-center">
+        <a href="#contact" class="mobile-menu-item bg-gunmetal text-light-silver hover:bg-dark-gunmetal hover:text-white block px-4 py-4 text-base font-bold transition-all duration-300 mx-4 my-4 text-center uppercase tracking-widest shadow-lg">
           Get Quote
         </a>
       </div>
@@ -133,7 +133,7 @@
           const targetSection = document.querySelector(targetId);
           
           if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 64; // Account for fixed navbar height
+            const offsetTop = targetSection.offsetTop - 80; // Account for taller navbar
             window.scrollTo({
               top: offsetTop,
               behavior: 'smooth'
@@ -145,11 +145,11 @@
       // Add active state based on scroll position
       window.addEventListener('scroll', function() {
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]:not([href="#contact"])');
         
         let current = '';
         sections.forEach(section => {
-          const sectionTop = section.offsetTop - 100;
+          const sectionTop = section.offsetTop - 120;
           const sectionHeight = section.clientHeight;
           
           if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
@@ -158,14 +158,109 @@
         });
         
         navLinks.forEach(link => {
-          link.classList.remove('text-blue-600', 'border-blue-600');
-          link.classList.add('text-gray-700', 'border-transparent');
+          link.classList.remove('text-dark-gunmetal', 'bg-silver');
+          link.classList.add('text-gunmetal');
           
           if (link.getAttribute('href') === `#${current}`) {
-            link.classList.remove('text-gray-700', 'border-transparent');
-            link.classList.add('text-blue-600', 'border-blue-600');
+            link.classList.remove('text-gunmetal');
+            link.classList.add('text-dark-gunmetal', 'bg-silver');
           }
         });
       });
     });
   </script>
+  
+  <style>
+    /* Custom gunmetal and silver colors */
+    :root {
+      --gunmetal: #2C3539;
+      --dark-gunmetal: #1F2528;
+      --silver: #C0C0C0;
+      --light-silver: #eeeded;
+      --steel-gray: #71797E;
+    }
+    
+    .bg-gunmetal {
+      background-color: var(--gunmetal);
+    }
+    
+    .bg-dark-gunmetal {
+      background-color: var(--dark-gunmetal);
+    }
+    
+    .bg-silver {
+      background-color: var(--silver);
+    }
+    
+    .bg-light-silver {
+      background-color: var(--light-silver);
+    }
+    
+    .text-gunmetal {
+      color: var(--gunmetal);
+    }
+    
+    .text-dark-gunmetal {
+      color: var(--dark-gunmetal);
+    }
+    
+    .text-silver {
+      color: var(--silver);
+    }
+    
+    .text-light-silver {
+      color: var(--light-silver);
+    }
+    
+    .border-gunmetal {
+      border-color: var(--gunmetal);
+    }
+    
+    .border-silver {
+      border-color: var(--silver);
+    }
+    
+    .text-steel-gray {
+      color: var(--steel-gray);
+    }
+    
+    .border-steel-gray {
+      border-color: var(--steel-gray);
+    }
+    
+    .hover\:bg-silver:hover {
+      background-color: var(--silver);
+    }
+    
+    .hover\:bg-light-silver:hover {
+      background-color: var(--light-silver);
+    }
+    
+    .hover\:bg-gunmetal:hover {
+      background-color: var(--gunmetal);
+    }
+    
+    .hover\:bg-dark-gunmetal:hover {
+      background-color: var(--dark-gunmetal);
+    }
+    
+    .hover\:text-gunmetal:hover {
+      color: var(--gunmetal);
+    }
+    
+    .hover\:text-dark-gunmetal:hover {
+      color: var(--dark-gunmetal);
+    }
+    
+    .hover\:text-silver:hover {
+      color: var(--silver);
+    }
+    
+    .ring-gunmetal {
+      --tw-ring-color: var(--gunmetal);
+    }
+    
+    .focus\:ring-gunmetal:focus {
+      --tw-ring-color: var(--gunmetal);
+    }
+  </style>
